@@ -1,65 +1,39 @@
-# fish-island-vscode-plugin README
+# 摸鱼岛 VSCode 插件
 
-This is the README for your extension "fish-island-vscode-plugin". After writing up a brief description, we recommend including the following sections.
+这是一个简单而实用的 Visual Studio Code 插件，让您在编码过程中轻松访问摸鱼岛网站。
 
-## Features
+## 功能特点
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 在 VSCode 活动栏中添加了一个"摸鱼岛"图标
+- 点击图标会打开一个侧边栏视图
+- 侧边栏视图中会加载 https://yucoder.cn/chat 网站
+- 通过命令面板（Ctrl+Shift+P）输入"打开摸鱼岛"可以打开一个独立的面板，显示同样的内容
 
-For example if there is an image subfolder under your extension project workspace:
+## 技术实现
 
-\!\[feature X\]\(images/feature-x.png\)
+本插件使用了 VSCode 的 WebView API 来嵌入网页内容，同时通过视图容器和活动栏图标提供了良好的用户体验。主要技术点包括：
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- WebView 面板创建与管理
+- 活动栏图标与视图容器配置
+- 命令注册与事件处理
 
-## Requirements
+## 使用方法
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. 安装插件后，在 VSCode 左侧活动栏中找到摸鱼岛图标
+2. 点击图标打开侧边栏视图
+3. 或者使用快捷键 `Ctrl+Shift+P` 打开命令面板，输入 "打开摸鱼岛" 来启动独立面板
 
-## Extension Settings
+## 开发与贡献
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+如果您想为这个插件做出贡献，请按照以下步骤操作：
 
-For example:
+1. 克隆仓库
+2. 运行 `npm install` 安装依赖
+3. 在 VSCode 中按 F5 启动调试
+4. 在新打开的 VSCode 窗口中测试您的更改
 
-This extension contributes the following settings:
+欢迎提交 Pull Request 或提出 Issue！
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## 许可证
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT
