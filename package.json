@@ -1,0 +1,60 @@
+{
+  "name": "fish-island-vscode-plugin",
+  "displayName": "fish-island-vscode-plugin",
+  "description": "摸鱼岛 VSCode 插件",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:fishIslandView",
+    "onCommand:fish-island-vscode-plugin.openFishIsland"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fish-island-vscode-plugin.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "fish-island-vscode-plugin.openFishIsland",
+        "title": "打开摸鱼岛"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "fish-island",
+          "title": "摸鱼岛",
+          "icon": "resources/fish-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "fish-island": [
+        {
+          "id": "fishIslandView",
+          "name": "摸鱼岛",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.25.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
